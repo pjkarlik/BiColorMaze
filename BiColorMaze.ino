@@ -38,6 +38,7 @@ void loop() {
 
 void displayMaze() {
   for (int d = 0; d < tCells; d += 1) {
+    // Take index and get x / y from d //
     int x = d % cc;
     int y = (d - x) / cc;
     matrix.writePixel(x, y, cellData[d] == 1 ? LED_GREEN : 0);
